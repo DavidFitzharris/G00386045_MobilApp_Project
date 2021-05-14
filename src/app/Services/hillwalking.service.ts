@@ -7,6 +7,6 @@ import {Observable} from 'rxjs';
 })
 export class HillwalkingService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private httpClient:HttpClient) { }
   
 }
