@@ -19,10 +19,13 @@
     "@angular/platform-browser": "~11.2.0",
     "@angular/platform-browser-dynamic": "~11.2.0",
     "@angular/router": "~11.2.0",
-    "@ionic-native/core": "^5.22.0-beta-1",
+    "@capacitor/core": "2.4.7",
+    "@ionic-native/core": "^5.33.0",
+    "@ionic-native/geolocation": "^5.33.0",
     "@ionic-native/google-maps": "^5.27.0-beta-20200630",
     "@ionic/angular": "^5.5.2",
     "cordova-android": "9.1.0",
+    "cordova-plugin-geolocation": "^4.1.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -37,6 +40,7 @@
     "@angular/compiler": "~11.2.0",
     "@angular/compiler-cli": "~11.2.0",
     "@angular/language-service": "~11.2.0",
+    "@capacitor/cli": "2.4.7",
     "@ionic/angular-toolkit": "^3.1.1",
     "@ionic/lab": "3.2.10",
     "@types/jasmine": "~3.6.0",
@@ -81,7 +85,10 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-plugin-inappbrowser": {}
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-geolocation": {
+        "GPS_REQUIRED": "true"
+      }
     },
     "platforms": [
       "android",

@@ -1,7 +1,8 @@
 {
   "name": "G00386045",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }
