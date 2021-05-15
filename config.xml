@@ -101,4 +101,9 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^4.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+<<<<<<< HEAD
+=======
+    <preference name="GOOGLE_MAPS_ANDROID_API_KEY" value="" />
+    <preference name="GOOGLE_MAPS_IOS_API_KEY" value="" />
+>>>>>>> f41aefd4603cb89811b77c57777990581bbab783
 </widget>
