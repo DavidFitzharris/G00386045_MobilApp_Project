@@ -8,8 +8,8 @@ import { AlertController } from '@ionic/angular';
 })
 export class Tab2Page {
   //bound vars
-  distance: number;
-  height: number;
+  distance: number = 0;
+  height: number = 0;
   weight: number;
   ground: number;
   pace: number;
@@ -66,8 +66,14 @@ export class Tab2Page {
 
     this.finalPace = 15 + this.weightDif + this.paceDif + this.groundDif;
     this.timeN = this.finalPace * (this.distance/1000) + (this.height/10);
+    if(this.timeN > 60)
+    {
     this.restTime = 10*(this.timeN/60);
     this.finalTime = this.timeN + this.restTime;
+    }
+    else{
+      this.finalTime = this.timeN;
+    }
     this.showAlert();
     console.log;
   }

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Map Reading Tools
+      Naismiths Rule
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,26 +11,26 @@
   <img src="assets/photos/map_compass.jpg"  alt="Map & Compass">
 
   <h1>Naismith Rule Calculator</h1>
-  <p>Using naismiths rule to estimate the time of your journey</p>
+  <p>Tool used to estimate the time of your journey, select all fields for valid result</p>
 
   <ion-item>
     <ion-label position="stacked" id="distance">Distance in meters</ion-label>
-    <ion-input type="number" [(ngModel)]="distance"></ion-input>
+    <ion-input placeholder="m" type="number" [(ngModel)]="distance"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="stacked" id="height" >Height gained in meters</ion-label>
-    <ion-input type="number" [(ngModel)]="height"></ion-input>
+    <ion-input placeholder="m" type="number" [(ngModel)]="height"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label>Carrying heavy weight?</ion-label>
-    <ion-select [(ngModel)]="weight" value="n">
+    <ion-select [(ngModel)]="weight" value="1">
       <ion-select-option value="1">Yes</ion-select-option>
       <ion-select-option value="2">No</ion-select-option>
     </ion-select>
   </ion-item>
   <ion-item>
     <ion-label>Main ground covered</ion-label>
-    <ion-select [(ngModel)]="ground" value="t">
+    <ion-select [(ngModel)]="ground" value="1">
       <ion-select-option value="1">Trail</ion-select-option>
       <ion-select-option value="2">Road</ion-select-option>
       <ion-select-option value="3">Off Track</ion-select-option> 
@@ -38,7 +38,7 @@
   </ion-item>
   <ion-item>
     <ion-label>Rough <i>walking</i> pace</ion-label>
-    <ion-select [(ngModel)]="pace" value="e">
+    <ion-select [(ngModel)]="pace" value="1">
       <ion-select-option value="1">Easy</ion-select-option>
       <ion-select-option value="2">Moderate</ion-select-option>
       <ion-select-option value="3">Fast</ion-select-option> 
