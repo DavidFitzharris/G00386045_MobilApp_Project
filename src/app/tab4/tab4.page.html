@@ -1,9 +1,33 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>tab4</ion-title>
+    <ion-title>Trails</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+  <ion-content>
+  <!-- <ion-list>  
+    <ion-item *ngFor=" let trail of hikingSpots">
+      <ion-item-group>
+        <img src="{{trail.thumbnail}}">
+        
+        <ion-label></ion-label>
+        <ion-label></ion-label>
+      </ion-item-group>
+    </ion-item>
+  </ion-list>  -->
+
+  <ion-card *ngFor=" let trail of hikingSpots">
+    <ion-card-header>
+      <ion-card-subtitle>{{trail.country}}</ion-card-subtitle>
+      <ion-card-title>{{trail.city}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <img src="{{trail.thumbnail}}">
+      <p>{{trail.description}}</p>
+      <ion-label>{{trail.url}}</ion-label>
+      <a href="{{trail.activities.url}}">{{trail.name}}</a>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HillwalkingService} from '../Services/hillwalking.service'
 
 @Component({
   selector: 'app-tab4',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab4Page implements OnInit {
 
-  constructor() { }
+  hikingSpots:any = [];
+  constructor(private hillwalking: HillwalkingService) { }
 
   ngOnInit() {
+    this.hillwalking.GetHikingData().subscribe( (data)=>{
+      this.hikingSpots = data.places;
+      console.log(this.hikingSpots);
+    });
   }
 
 }

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Location
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,7 +9,13 @@
 <ion-content [fullscreen]="true">
 
   <ion-button expand="block" (click)="getLocation()">get location</ion-button>
-  {{lat}}, {{long}}
+  {{getLat}}, {{getLong}}
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <h3>Display on Map Below</h3>
+  <p>
+    Using Google Maps
+  </p>
+  <ion-button ion-button (click)="loadMap()">Load Map</ion-button>
+  <div style="height: 100%; width: 100%;" id="map_canvas"></div>
+
 </ion-content>
