@@ -11,6 +11,7 @@ export class Tab4Page implements OnInit {
   hikingSpots:any = [];
   constructor(private hillwalking: HillwalkingService) { }
 
+  //calling from Services
   ngOnInit() {
     this.hillwalking.GetHikingData().subscribe( (data)=>{
       this.hikingSpots = data.places;

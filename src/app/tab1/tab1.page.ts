@@ -14,6 +14,7 @@ map:any;
   
   constructor(private geolocation: Geolocation, private googleMaps: GoogleMaps) {}
 
+  //Gets the location
   getLocation(){
 
     this.geolocation.getCurrentPosition().then((resp) => {
@@ -25,6 +26,7 @@ map:any;
      
   }
 
+  //loads the map in the location area
   loadMap() {
     this.map = GoogleMaps.create('map_canvas', {
       camera: {

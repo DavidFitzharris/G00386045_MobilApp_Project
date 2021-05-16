@@ -7,10 +7,11 @@
 </ion-header>
 
 <ion-content id="content" [fullscreen]="true">
-
+  <!-- Getting Location -->
   <ion-button color="light" expand="block" (click)="getLocation()">get location</ion-button>
   {{getLat}}, {{getLong}}
 
+  <!-- Map to bdisplay in location area -->
   <h3>Display on Map Below</h3>
   <p>
     Using Google Maps

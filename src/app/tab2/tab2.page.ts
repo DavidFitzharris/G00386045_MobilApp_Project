@@ -23,11 +23,16 @@ export class Tab2Page {
   finalTime: number
   resultMessage: number;
 
-
+  
   constructor(public alertController: AlertController) {}
 
   naiCalc(){
+    //The following takes into account the different variables inputted and adds 
+    //or takes away minutes per km traveled getting the final av pace and using
+    //this to calculate total time, with the addition on 1 min per 10 meters climbed
+    //and after 1 hour, adds 10 mins per hour travelled
 
+    //Taking in the variables
     if(this.weight == 1)
     {
       this.weightDif = 3;
@@ -64,8 +69,10 @@ export class Tab2Page {
       this.paceDif = -3;
     }
 
+    //calculating the time
     this.finalPace = 15 + this.weightDif + this.paceDif + this.groundDif;
     this.timeN = this.finalPace * (this.distance/1000) + (this.height/10);
+    //checking for the break time to be added
     if(this.timeN > 60)
     {
     this.restTime = 10*(this.timeN/60);
@@ -78,6 +85,7 @@ export class Tab2Page {
     console.log;
   }
 
+  //display the final result
   showAlert() {
 
     this.alertController.create({
