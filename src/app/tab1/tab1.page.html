@@ -6,16 +6,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content id="content" [fullscreen]="true">
 
-  <ion-button expand="block" (click)="getLocation()">get location</ion-button>
+  <ion-button color="light" expand="block" (click)="getLocation()">get location</ion-button>
   {{getLat}}, {{getLong}}
 
   <h3>Display on Map Below</h3>
   <p>
     Using Google Maps
   </p>
-  <ion-button ion-button (click)="loadMap()">Load Map</ion-button>
+  <ion-button color="light" expand="block" ion-button (click)="loadMap()">Load Map</ion-button>
   <div style="height: 100%; width: 100%;" id="map_canvas"></div>
 
 </ion-content>
